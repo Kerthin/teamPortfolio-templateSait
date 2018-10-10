@@ -1,0 +1,165 @@
+@import '../../bower_components/reset.scss/reset.scss';
+
+.paletteWrap {
+	max-width: 100%;
+	width: 960px;
+	margin: 0 auto;
+
+	& &__item {
+		margin-bottom: 5px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+		.paletteWrap__titleBox {
+			width: 100%;
+			text-align: center;
+
+			.paletteWrap__title {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 18px;
+				margin: 5px;
+			}
+
+			.paletteWrap__nameColors {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 16px;
+				margin: 5px;
+			}
+		}
+
+		.paletteWrap__schemeBox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+
+		.paletteWrap__colorScheme {
+			margin: 15px;
+			border-radius: 5px;
+			overflow: hidden;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+			.paletteWrap__colorItem {
+				display: block;
+				float: left;
+			}
+
+			&_square {
+				width: 100px;
+				height: 100px;
+
+				.paletteWrap__colorItem {
+					width: 50%;
+					height: 50%;
+				}
+			}
+
+			&_vertical {
+				width: 50px;
+				height: 200px;
+
+				.paletteWrap__colorItem {
+					width: 100%;
+					height: 25%;
+				}
+			}
+
+			&_horizontal {
+				width: 200px;
+				height: 50px;
+
+				.paletteWrap__colorItem {
+					width: 25%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+$colorPalette: (
+	1	: #f5f4e8,
+	2	: #c50d66,
+	3	: #f07810,
+	4	: #eec60a,
+
+	5	: #13334c,
+	6	: #005792,
+	7	: #f6f6e9,
+	8	: #fd5f00,
+
+	9	: #57D1C9,
+	10	: #ED5485,
+	11	: #FFFBCB,
+	12	: #FFE869,
+
+	13	: #F8F9FC,
+	14	: #C00000,
+	15	: #DE3C3C,
+	16	: #F7B32D,
+
+	17	: #003246,
+	18	: #E4491C,
+	19	: #0387B1,
+	20	: #F5F5F5,
+
+	21	: #ff5108,
+	22	: #fffdf8,
+	23	: #ff2321,
+	24	: #000000,
+
+	25	: #7abed1,
+	26	: #f05945,
+	27	: #f7f3e9,
+	28	: #f05945,
+
+	29	: #FFFC31,
+	30	: #F6F7EB,
+	31	: #E94F37,
+	32	: #393E41,
+
+	33	: #518f8b,
+	34	: #e3e1c8,
+	35	: #472c33,
+	36	: #e6462d,
+
+	37	: #c12127,
+	38	: #2a333c,
+	39	: #ffffff,
+	40	: #8f9299,
+
+	41	: #EDEDE4,
+	42	: #F74906,
+	43	: #554E44,
+	44	: #FFFFFF,
+
+	45	: #221E1D,
+	46	: #ECEAE0,
+	47	: #63AA9C,
+	48	: #E9633B,
+
+	49	: #a10015,
+	50	: #d52b15,
+	51	: #efeee9,
+	52	: #beb1b4,
+
+	53	: #222831,
+	54	: #393E46,
+	55	: #FD7013,
+	56	: #EEEEEE,
+
+	57	: #FF7260,
+	58	: #9BD7D5,
+	59	: #FFF5C3,
+	60	: #505050,
+
+	61	: #FF3B1D,
+	62	: #7BDFF2,
+	63	: #000000,
+	64	: #FFFFFF
+);
+
+@each $hex, $color in $colorPalette {
+	.paletteWrap__colorItem_#{$hex} {
+		background-color: $color;
+	}
+}

@@ -1,0 +1,43 @@
+html
+	head
+		include template/head.pug
+		include template/partials/linkPalette.pug
+	body
+		.paletteWrap
+			mixin paletteItemMix(titlePaletteMix, firstColorMix, secondColorMix, thirdColorMix, fourthColorMix, firstHexColorMix, seconHexdColorMix, thirdHexColorMix, fourtHexhColorMix)
+				.paletteWrap__item
+					.paletteWrap__titleBox
+						h1.paletteWrap__title #{titlePaletteMix}
+						p.paletteWrap__nameColors ##{firstHexColorMix} ##{seconHexdColorMix} ##{thirdHexColorMix} ##{fourtHexhColorMix}
+					.paletteWrap__schemeBox
+						.paletteWrap__colorScheme.paletteWrap__colorScheme_square
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${firstColorMix}`)
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${secondColorMix}`)
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${thirdColorMix}`)
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${fourthColorMix}`)
+						.paletteWrap__colorScheme.paletteWrap__colorScheme_vertical
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${firstColorMix}`)
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${secondColorMix}`)
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${thirdColorMix}`)
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${fourthColorMix}`)
+						.paletteWrap__colorScheme.paletteWrap__colorScheme_horizontal
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${firstColorMix}`)
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${secondColorMix}`)
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${thirdColorMix}`)
+							.paletteWrap__colorItem(class=`paletteWrap__colorItem_${fourthColorMix}`)
+			+paletteItemMix('SET 1', '1', '2', '3', '4', 'f5f4e8', 'c50d66', 'f07810', 'eec60a')
+			+paletteItemMix('SET 2', '5', '6', '7', '8', '13334c', '005792', 'f6f6e9', 'fd5f00')
+			+paletteItemMix('SET 3', '9', '10', '11', '12', '57D1C9', 'ED5485', 'FFFBCB', 'FFE869')
+			+paletteItemMix('SET 4', '13', '14', '15', '16', 'F8F9FC', 'C00000', 'DE3C3C', 'F7B32D')
+			+paletteItemMix('SET 5', '17', '18', '19', '20', '003246', 'E4491C', '0387B1', 'F5F5F5')
+			+paletteItemMix('SET 6', '21', '22', '23', '24', 'ff5108', 'fffdf8', 'ff2321', '000000')
+			+paletteItemMix('SET 7', '25', '26', '27', '28', '7abed1', 'f05945', 'f7f3e9', 'f05945')
+			+paletteItemMix('SET 8', '29', '30', '31', '32', 'FFFC31', 'F6F7EB', 'E94F37', '393E41')
+			+paletteItemMix('SET 9', '33', '34', '35', '36', '518f8b', 'e3e1c8', '472c33', 'e6462d')
+			+paletteItemMix('SET 10', '37', '38', '39', '40', 'c12127', '2a333c', 'ffffff', '8f9299')
+			+paletteItemMix('SET 11', '41', '42', '43', '44', 'EDEDE4', 'F74906', '554E44', 'FFFFFF')
+			+paletteItemMix('SET 12', '45', '46', '47', '48', '221E1D', 'ECEAE0', '63AA9C', 'E9633B')
+			+paletteItemMix('SET 13', '49', '50', '51', '52', 'a10015', 'd52b15', 'efeee9', 'beb1b4')
+			+paletteItemMix('SET 14', '53', '54', '55', '56', '222831', '393E46', 'FD7013', 'EEEEEE')
+			+paletteItemMix('SET 15', '57', '58', '59', '60', 'FF7260', '9BD7D5', 'FFF5C3', '505050')
+			+paletteItemMix('SET 16', '61', '62', '63', '64', 'FF3B1D', '7BDFF2', '000000', 'FFFFFF')
