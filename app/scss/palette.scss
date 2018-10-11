@@ -1,19 +1,33 @@
 @import '../../bower_components/reset.scss/reset.scss';
-
-.paletteWrap {
+.container {
 	max-width: 100%;
 	width: 960px;
 	margin: 0 auto;
+	padding: 5px;
+}
+.paletteWrap {
+
+	& &__titleBox {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+
+		.paletteWrap__title {
+			font-family: 'OpenSans', sans-serif;
+			font-size: 24px;
+		}
+	}
 
 	& &__item {
-		margin-bottom: 5px;
+		padding: 5px;
+		margin-bottom: 10px;
 		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
-		.paletteWrap__titleBox {
+		.paletteWrap__titleItemBox {
 			width: 100%;
 			text-align: center;
 
-			.paletteWrap__title {
+			.paletteWrap__titleItem {
 				font-family: 'OpenSans', sans-serif;
 				font-size: 18px;
 				margin: 5px;
@@ -28,6 +42,7 @@
 
 		.paletteWrap__schemeBox {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
 			width: 100%;
@@ -71,6 +86,167 @@
 				.paletteWrap__colorItem {
 					width: 25%;
 					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+.hoverBlockWrap {
+
+	& &__titleBox {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+
+		.hoverBlockWrap__title {
+			font-family: 'OpenSans', sans-serif;
+			font-size: 24px;
+		}
+	}
+
+	& &__item {
+		padding: 5px;
+		margin-bottom: 10px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+		.hoverBlockWrap__titleItemBox {
+			width: 100%;
+			text-align: center;
+
+			.hoverBlockWrap__titleItem {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 18px;
+				margin: 5px;
+			}
+
+			.hoverBlockWrap__nameTypes {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 16px;
+				margin: 5px;
+			}
+		}
+
+		.hoverBlockWrap__setBox {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+
+		.hoverBlockWrap__hoverBlock {
+			position: relative;
+			margin: 5px 10px;
+
+			&_square {
+				width: 220px;
+				height: 220px;
+
+				.hoverBlockWrap__gradientBlock {
+					width: 200px;
+					height: 200px;
+				}
+				.hoverBlockWrap__contentBlock {
+					width: 200px;
+					height: 200px;
+				}
+			}
+
+			&_vertical {
+				width: 220px;
+				height: 320px;
+
+				.hoverBlockWrap__gradientBlock {
+					width: 200px;
+					height: 300px;
+				}
+				.hoverBlockWrap__contentBlock {
+					width: 200px;
+					height: 300px;
+				}
+			}
+
+			&_horizontal {
+				width: 320px;
+				height: 220px;
+
+				.hoverBlockWrap__gradientBlock {
+					width: 300px;
+					height: 200px;
+				}
+				.hoverBlockWrap__contentBlock {
+					width: 300px;
+					height: 200px;
+				}
+			}
+
+			.hoverBlockWrap__gradientBlock {
+				position: absolute;
+				background: repeating-linear-gradient(135deg, #fff, #fff 10px, #005792 10px, #005792 20px);
+				box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+				&_tl {
+
+				}
+
+				&_tr {
+					right: 0
+				}
+
+				&_bl {
+					bottom: 0;
+				}
+
+				&_br {
+					bottom: 0;
+					right: 0;
+				}
+			}
+			.hoverBlockWrap__contentBlock {
+				position: absolute;
+				box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+				transition: all 0.5s;
+
+				&_bg {
+					background-color: #fd5f00;
+				}
+
+				&_tl {
+
+				}
+
+				&_tr {
+					right: 0
+				}
+
+				&_bl {
+					bottom: 0;
+				}
+
+				&_br {
+					bottom: 0;
+					right: 0;
+				}
+			}
+
+			&:hover {
+				.hoverBlockWrap__contentBlock {
+					&_tl {
+						margin: 20px 0 0 20px;
+					}
+
+					&_tr {
+						margin: 20px 20px 0 0;
+					}
+
+					&_bl {
+						margin: 0 0 20px 20px;
+					}
+
+					&_br {
+						margin: 0 20px 20px 0;
+					}
 				}
 			}
 		}
