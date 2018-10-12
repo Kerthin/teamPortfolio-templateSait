@@ -75,3 +75,20 @@ html
 						p.logoWrap__nameEffect GLITCH
 					.logoWrap__effectBox
 						h1.logoWrap__logo(data-text="Logo") Logo
+			.burgerWrap
+				.burgerWrap__titleBox
+					h1.burgerWrap__title BURGER MENU SVG
+				mixin burgerItemMix(titleBurgerMix, nameTypeBurgerMix, typeBurgerMix, coordinateFirstLayer, coordinateSecondLayer, coordinateThirdLayer)
+					.burgerWrap__item
+						.burgerWrap__titleItemBox
+							h1.burgerWrap__titleItem #{titleBurgerMix}
+							p.burgerWrap__nameTypes #{nameTypeBurgerMix}
+						.burgerWrap__typeBox(class=`${typeBurgerMix}`)
+							div(class=`${typeBurgerMix}__burgerWrap`)
+								label(class=`${typeBurgerMix}__burgerBox`)
+									<input class=`${typeBurgerMix}__burgerInput` type="checkbox"/>
+										svg(class=`strokeWrap ${typeBurgerMix}__strokeWrap` viewBox="30 30 40 40" xmlns='http://www.w3.org/2000/svg')
+											path.strokeWrap__stroke.strokeWrap__stroke_first(d=`${coordinateFirstLayer}`)
+											path.strokeWrap__stroke.strokeWrap__stroke_second(d=`${coordinateSecondLayer}`)
+											path.strokeWrap__stroke.strokeWrap__stroke_third(d=`${coordinateThirdLayer}`)
+				+burgerItemMix('BURGER 1', 'SVG', 'burgerAround', 'M0 40h62c13 0 6 28-4 18L35 35', 'M0 50h70', 'M0 60h62c13 0 6-28-4-18L35 65')
