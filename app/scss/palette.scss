@@ -1,4 +1,7 @@
 @import '../../bower_components/reset.scss/reset.scss';
+::-webkit-scrollbar {
+	width: 0;
+}
 .container {
 	max-width: 100%;
 	width: 960px;
@@ -247,6 +250,101 @@
 					&_br {
 						margin: 0 20px 20px 0;
 					}
+				}
+			}
+		}
+	}
+}
+
+.logoWrap {
+
+	& &__titleBox {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+
+		.logoWrap__title {
+			font-family: 'OpenSans', sans-serif;
+			font-size: 24px;
+		}
+	}
+
+	& &__item {
+		padding: 5px;
+		margin-bottom: 10px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+		.logoWrap__titleItemBox {
+			width: 100%;
+			text-align: center;
+
+			.logoWrap__titleItem {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 18px;
+				margin: 5px;
+			}
+
+			.logoWrap__nameEffect {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 16px;
+				margin: 5px;
+			}
+		}
+
+		.logoWrap__effectBox {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+
+		$primaryColor: #fd5f00;
+		$secondaryColor: #fff;
+		$steps: 20;
+
+		.logoWrap__logo {
+			position: relative;
+			font-family: 'Roboto', sans-serif;
+			// font-size: 7em;
+			font-size: 98px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-shadow: 6px -6px 0px #fd5f00;
+			background: repeating-linear-gradient(45deg, #005792, #005792 1px, #fff 2px, #fff 3px);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			&::before,
+			&::after {
+				content: attr(data-text);
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				overflow: hidden;
+				background: $secondaryColor;
+				color: $primaryColor;
+				clip: rect(0, 900px, 0, 0);
+			}
+
+			&::before {
+				left: 7px;
+				text-shadow: 1px 0 #fd5f00;
+				animation: glitch-effect 3s infinite linear alternate-reverse;
+			}
+
+			&::after {
+				left: 3px;
+				text-shadow: -1px 0 #fd5f00;
+				animation: glitch-effect 2s infinite linear alternate-reverse;
+			}
+		}
+
+		@keyframes glitch-effect{
+			@for $i from 0 through $steps{
+				#{percentage($i*(1/$steps))}{
+					clip:rect(random(100)+px,9999px,random(100)+px,0);
 				}
 			}
 		}
