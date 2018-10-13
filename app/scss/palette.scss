@@ -512,6 +512,195 @@
 	}
 
 }
+
+.waveWrap {
+
+	& &__titleBox {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+
+		.waveWrap__title {
+			font-family: 'OpenSans', sans-serif;
+			font-size: 24px;
+		}
+	}
+
+	& &__item {
+		padding: 5px;
+		margin-bottom: 10px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+		.waveWrap__titleItemBox {
+			width: 100%;
+			text-align: center;
+
+			.waveWrap__titleItem {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 18px;
+				margin: 5px;
+			}
+
+			.waveWrap__nameTypes {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 16px;
+				margin: 5px;
+			}
+		}
+
+		.waveWrap__setBox {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin: 20px 0;
+		}
+
+		.waveWrap__wavesContainer {
+			position: relative;
+			overflow: hidden;
+			margin: 20px;
+
+			&_lg {
+				width: 100px;
+				height: 70px;
+
+				.waveWrap__wave {
+					&:nth-of-type(1) {
+						margin-top: -10px;
+					}
+
+					&:nth-of-type(2) {
+						margin-top: -40px;
+					}
+
+					&:nth-of-type(3) {
+						margin-top: -40px;
+					}
+				}
+
+				.waveWrap__waveСoordinates {
+					width: 100px;
+				}
+			}
+
+			&_md {
+				width: 50px;
+				height: 50px;
+
+				.waveWrap__wave {
+					&:nth-of-type(1) {
+						margin-top: -20px;
+					}
+
+					&:nth-of-type(2) {
+						margin-top: -45px;
+					}
+
+					&:nth-of-type(3) {
+						margin-top: -45px;
+					}
+				}
+
+				.waveWrap__waveСoordinates {
+					width: 50px;
+				}
+			}
+
+			&_sm {
+				width: 25px;
+				height: 25px;
+
+				.waveWrap__wave {
+					&:nth-of-type(1) {
+						margin-top: -25px;
+					}
+
+					&:nth-of-type(2) {
+						margin-top: -55px;
+					}
+
+					&:nth-of-type(3) {
+						margin-top: -55px;
+					}
+				}
+
+				.waveWrap__waveСoordinates {
+					width: 25px;
+				}
+			}
+
+			.waveWrap__waveСoordinates {
+				fill: none;
+				stroke-miterlimit: 10;
+				stroke-width: 4px;
+				stroke-linecap: round;
+				stroke-dasharray: 0 0 0 0;
+
+				&.waveWrap__waveСoordinates_orange {
+					stroke: #fd5f00;
+				}
+
+				&.waveWrap__waveСoordinates_blue {
+					stroke: #005792;
+				}
+
+				&.waveWrap__waveСoordinates_9s {
+					animation: moveTheWave 900ms linear infinite;
+				}
+
+				&.waveWrap__waveСoordinates_7s {
+					animation: moveTheWave 700ms linear infinite;
+				}
+
+				&.waveWrap__waveСoordinates_5s {
+					animation: moveTheWave 500ms linear infinite;
+				}
+			}
+
+			@keyframes moveTheWave {
+				0% {
+					stroke-dashoffset: 0;
+					transform: translate3d(0, 0, 0);
+				}
+				100% {
+					stroke-dashoffset: 40;
+					transform: translate3d(-73px, 0, 0);
+				}
+			}
+		}
+	}
+}
+
+.waves {
+	position: relative;
+	/*left: 90%;*/
+	overflow: hidden;
+	width: 100px;
+	height: 70px;
+}
+
+.wave {
+	fill: none;
+	stroke: #fd5f00;
+	stroke-miterlimit: 10;
+	width: 100px;
+	stroke-width: 4px;
+	stroke-linecap: round;
+	animation: moveTheWave 900ms linear infinite;
+	stroke-dasharray: 0 0 0 0;
+}
+
+svg:nth-of-type(1) {
+	margin-top: -10px;
+}
+svg:nth-of-type(2) {
+	margin-top: -40px;
+}
+svg:nth-of-type(3) {
+	margin-top: -40px;
+}
 $colorPalette: (
 	1	: #f5f4e8,
 	2	: #c50d66,

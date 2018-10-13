@@ -56,7 +56,7 @@ var 	config			= {
 gulp.task('html:dist',	function()	{
 	gulp.src(path.app.pug)
 		.pipe(pug({
-			pretty: false
+			pretty: true
 		}))
 		.pipe(gulp.dest(path.dist.html))
 		.pipe(reload({stream:	true}));	//Перезагрузка сервера для обновлений
