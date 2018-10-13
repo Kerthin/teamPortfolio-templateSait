@@ -4,6 +4,10 @@ html
 		include template/partials/linkPalette.pug
 	body
 		.container
+			.container__loaderWrap
+				.loader
+				.loaderSection.loaderSection_left
+				.loaderSection.loaderSection_right
 			.paletteWrap
 				.paletteWrap__titleBox
 					h1.paletteWrap__title PALETTE
@@ -120,3 +124,21 @@ html
 				+waveItemMix('WAVES SET 1', 'BLUE SPEED-900 MS', 'blue', '9s')
 				+waveItemMix('WAVES SET 1', 'BLUE SPEED-700 MS', 'blue', '7s')
 				+waveItemMix('WAVES SET 1', 'BLUE SPEED-500 MS', 'blue', '5s')
+			.burgerWrap
+				.burgerWrap__titleBox
+					h1.burgerWrap__title BURGER MENU SVG
+				mixin burgerItemMix(titleBurgerMix, nameTypeBurgerMix, typeBurgerMix, coordinateFirstLayer, coordinateSecondLayer, coordinateThirdLayer, jsClassPopup)
+					.burgerWrap__item
+						.burgerWrap__titleItemBox
+							h1.burgerWrap__titleItem #{titleBurgerMix}
+							p.burgerWrap__nameTypes #{nameTypeBurgerMix}
+						.burgerWrap__typeBox(class=`${typeBurgerMix}`)
+							div(class=`${typeBurgerMix}__burgerWrap ${jsClassPopup}`)
+								label(class=`${typeBurgerMix}__burgerBox`)
+									<input class="burgerInput" type="checkbox"/>
+										svg(class=`strokeWrap ${typeBurgerMix}__strokeWrap` viewBox="30 30 40 40" xmlns='http://www.w3.org/2000/svg')
+											path.strokeWrap__stroke.strokeWrap__stroke_first(d=`${coordinateFirstLayer}`)
+											path.strokeWrap__stroke.strokeWrap__stroke_second(d=`${coordinateSecondLayer}`)
+											path.strokeWrap__stroke.strokeWrap__stroke_third(d=`${coordinateThirdLayer}`)
+				+burgerItemMix('BURGER 1', 'SVG', 'burgerAround', 'M0 40h62c13 0 6 28-4 18L35 35', 'M0 50h70', 'M0 60h62c13 0 6-28-4-18L35 65', 'js-burger_popupOpen')
+		include template/scripts.pug

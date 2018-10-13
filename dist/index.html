@@ -17,6 +17,11 @@
   </head>
   <body>
     <div class="container">
+      <div class="container__loaderWrap">
+        <div class="loader"></div>
+        <div class="loaderSection loaderSection_left"></div>
+        <div class="loaderSection loaderSection_right"></div>
+      </div>
       <div class="paletteWrap">
         <div class="paletteWrap__titleBox">
           <h1 class="paletteWrap__title">PALETTE</h1>
@@ -827,6 +832,29 @@
                   </div>
                 </div>
       </div>
+      <div class="burgerWrap">
+        <div class="burgerWrap__titleBox">
+          <h1 class="burgerWrap__title">BURGER MENU SVG</h1>
+        </div>
+                <div class="burgerWrap__item">
+                  <div class="burgerWrap__titleItemBox">
+                    <h1 class="burgerWrap__titleItem">BURGER 1</h1>
+                    <p class="burgerWrap__nameTypes">SVG</p>
+                  </div>
+                  <div class="burgerWrap__typeBox burgerAround">
+                    <div class="burgerAround__burgerWrap js-burger_popupOpen">
+                      <label class="burgerAround__burgerBox"><input class="burgerInput" type="checkbox"/>
+                        <svg class="strokeWrap burgerAround__strokeWrap" viewBox="30 30 40 40" xmlns="http://www.w3.org/2000/svg">
+                          <path class="strokeWrap__stroke strokeWrap__stroke_first" d="M0 40h62c13 0 6 28-4 18L35 35"></path>
+                          <path class="strokeWrap__stroke strokeWrap__stroke_second" d="M0 50h70"></path>
+                          <path class="strokeWrap__stroke strokeWrap__stroke_third" d="M0 60h62c13 0 6-28-4-18L35 65"></path>
+                        </svg>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+      </div>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
