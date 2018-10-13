@@ -350,6 +350,168 @@
 		}
 	}
 }
+
+.burgerWrap {
+
+	& &__titleBox {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+
+		.burgerWrap__title {
+			font-family: 'OpenSans', sans-serif;
+			font-size: 24px;
+		}
+	}
+
+	& &__item {
+		padding: 5px;
+		margin-bottom: 10px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+		.burgerWrap__titleItemBox {
+			width: 100%;
+			text-align: center;
+
+			.burgerWrap__titleItem {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 18px;
+				margin: 5px;
+			}
+
+			.burgerWrap__nameTypes {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 16px;
+				margin: 5px;
+			}
+		}
+
+		.burgerWrap__typeBox {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin: 20px 0;
+		}
+
+		.burgerAround {
+
+			&__burgerWrap {
+				z-index: 5;
+			}
+
+			&__burgerBox {
+				display: block;
+				width: 50px;
+				height: 50px;
+				cursor: pointer;
+
+				.strokeWrap__stroke {
+					fill: none;
+					stroke: #fd5f00;
+					stroke-width: 3;
+					stroke-linecap: round;
+					stroke-linejoin: round;
+					--length: 24;
+					--offset: -38;
+					stroke-dasharray: var(--length) var(--total-length);
+					stroke-dashoffset: var(--offset);
+					transition: all .8s cubic-bezier(.645, .045, .355, 1);
+
+					&_first,
+					&_third {
+						--total-length: 126.64183044433594;
+					}
+
+					&_second {
+						--total-length: 70;
+					}
+				}
+			}
+
+			.burgerInput {
+				display: none;
+
+				&:checked {
+					+ .strokeWrap {
+						.strokeWrap__stroke_first,
+						.strokeWrap__stroke_third {
+							--length: 22.627416998;
+							--offset: -94.1149185097;
+						}
+
+						.strokeWrap__stroke_second {
+							--length: 0;
+							--offset: -50;
+						}  
+					}
+				}
+			}
+		}
+
+		.joinAround {
+
+			&__burgerWrap {
+				z-index: 5;
+			}
+
+			&__burgerBox {
+				display: block;
+				width: 50px;
+				height: 50px;
+				cursor: pointer;
+
+				.strokeWrap__stroke {
+					fill: none;
+					stroke: #fd5f00;
+					stroke-width: 3;
+					stroke-linecap: round;
+					stroke-linejoin: round;
+					--length: 24;
+					--offset: -38;
+					stroke-dasharray: var(--length) var(--total-length);
+					stroke-dashoffset: var(--offset);
+					transition: all .8s cubic-bezier(.645, .045, .355, 1);
+
+					&_first,
+					&_third {
+						--total-length: 111.22813415527344;
+						--offset: -50.22813415527344;
+					}
+
+					&_second {
+						--total-length: 99;
+					}
+				}
+			}
+
+			.burgerInput {
+				display: none;
+
+				&:checked {
+					+ .strokeWrap {
+						.strokeWrap__stroke_first,
+						.strokeWrap__stroke_third {
+							--length: 22.627416998;
+							--offset: -16.9705627485;
+						}
+
+						.strokeWrap__stroke_second {
+							--length: 0;
+							--offset: -20;
+						}
+
+						.strokeWrap__stroke {
+							transform: translateX(30px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
 $colorPalette: (
 	1	: #f5f4e8,
 	2	: #c50d66,

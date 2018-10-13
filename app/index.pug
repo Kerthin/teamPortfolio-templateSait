@@ -86,9 +86,10 @@ html
 						.burgerWrap__typeBox(class=`${typeBurgerMix}`)
 							div(class=`${typeBurgerMix}__burgerWrap`)
 								label(class=`${typeBurgerMix}__burgerBox`)
-									<input class=`${typeBurgerMix}__burgerInput` type="checkbox"/>
+									<input class="burgerInput" type="checkbox"/>
 										svg(class=`strokeWrap ${typeBurgerMix}__strokeWrap` viewBox="30 30 40 40" xmlns='http://www.w3.org/2000/svg')
 											path.strokeWrap__stroke.strokeWrap__stroke_first(d=`${coordinateFirstLayer}`)
 											path.strokeWrap__stroke.strokeWrap__stroke_second(d=`${coordinateSecondLayer}`)
 											path.strokeWrap__stroke.strokeWrap__stroke_third(d=`${coordinateThirdLayer}`)
 				+burgerItemMix('BURGER 1', 'SVG', 'burgerAround', 'M0 40h62c13 0 6 28-4 18L35 35', 'M0 50h70', 'M0 60h62c13 0 6-28-4-18L35 65')
+				+burgerItemMix('BURGER 2', 'SVG', 'joinAround', 'M0 70l28-28c2-2 2-2 7-2h64', 'M0 50h99', 'M0 30l28 28c2 2 2 2 7 2h64')
