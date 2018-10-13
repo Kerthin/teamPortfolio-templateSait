@@ -3,6 +3,7 @@
 	var formEl = document.querySelector('.menuPopup'),
 		revealer = new RevealFx(formEl),
 		openCtrl = document.querySelector('.js-burger_popupOpen');
+		formEl.style.zIndex = "50";
 
 		openCtrl.onclick = function() {
 			if (openCtrl.classList.contains('js-burger_popupOpen') === true) {
@@ -14,7 +15,7 @@
 						formEl.classList.add('js-menuPopup_open');
 						contentEl.style.opacity = 1;
 						openCtrl.classList.remove('js-burger_popupOpen');
-						openCtrl.style.zIndex = "9999";
+						openCtrl.style.zIndex = "999";
 						formEl.style.zIndex = "50";
 						contentEl.style.zIndex = "50";
 					}

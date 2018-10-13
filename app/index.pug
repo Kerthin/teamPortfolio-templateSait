@@ -146,4 +146,26 @@ html
 											path.strokeWrap__stroke.strokeWrap__stroke_second(d=`${coordinateSecondLayer}`)
 											path.strokeWrap__stroke.strokeWrap__stroke_third(d=`${coordinateThirdLayer}`)
 				+burgerItemMix('BURGER 1', 'SVG', 'burgerAround', 'M0 40h62c13 0 6 28-4 18L35 35', 'M0 50h70', 'M0 60h62c13 0 6-28-4-18L35 65', 'js-burger_popupOpen')
+			.hoverButtonWrap
+				.hoverButtonWrap__titleBox
+					h1.hoverButtonWrap__title HOVER BUTTONS
+				mixin hoverButtonItemMix(titleButtonBlockMix)
+					.hoverButtonWrap__item
+						.hoverButtonWrap__titleItemBox
+							h1.hoverButtonWrap__titleItem #{titleButtonBlockMix}
+							p.hoverButtonWrap__nameTypes TOP-RIGHT TOP-LEFT BOTTOM-RIGHT BOTTOM-LEFT
+						.hoverButtonWrap__setBox
+							.hoverButtonWrap__hoverBlock
+								.hoverButtonWrap__gradientBlock.hoverButtonWrap__gradientBlock_bl
+								button.hoverButtonWrap__button.hoverButtonWrap__button_tr View More
+							.hoverButtonWrap__hoverBlock
+								.hoverButtonWrap__gradientBlock.hoverButtonWrap__gradientBlock_br
+								button.hoverButtonWrap__button.hoverButtonWrap__button_tl View More
+							.hoverButtonWrap__hoverBlock
+								.hoverButtonWrap__gradientBlock.hoverButtonWrap__gradientBlock_tl
+								button.hoverButtonWrap__button.hoverButtonWrap__button_br View More
+							.hoverButtonWrap__hoverBlock
+								.hoverButtonWrap__gradientBlock.hoverButtonWrap__gradientBlock_tr
+								button.hoverButtonWrap__button.hoverButtonWrap__button_bl View More
+				+hoverButtonItemMix('SLIDING BUTTONS')
 		include template/scripts.pug
