@@ -8,6 +8,11 @@ html
 				.loader
 				.loaderSection.loaderSection_left
 				.loaderSection.loaderSection_right
+			section.menuPopup.container__menuPopup
+				- var linkPopupText = ['HOME', 'PAGES', 'PORTFOLIO', 'BLOG', 'ABOUT', 'OVERLAY'];
+				nav.menuPopup__itemWrap
+					for name in linkPopupText
+						a.menuPopup__link= name
 			.paletteWrap
 				.paletteWrap__titleBox
 					h1.paletteWrap__title PALETTE

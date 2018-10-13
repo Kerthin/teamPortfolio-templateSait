@@ -100,7 +100,7 @@
 				opacity: 0;
 				transition: all 0.3s ease-out;
 			}
-			
+
 			.loaderSection_left {
 				transform: translateX(-100%);
 				transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -111,6 +111,131 @@
 			}
 		}
 	}
+}
+.menuPopup {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	&__itemWrap {
+		position: absolute;
+		background: #13334c;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+
+		.menuPopup__link {
+			text-decoration: none;
+			font-family: 'Roboto', sans-serif;
+			font-size: 25px;
+			letter-spacing: 3px;
+			color: #f6f6e9;
+			position: relative;
+			margin-bottom: 30px;
+			/*transition: all .2s;*/
+			overflow: hidden;
+			cursor: pointer;
+
+			&:hover {
+
+				&::before {
+					left: 100%;
+				}
+
+				&::after {
+					left: 0%;
+				}
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: #fd5f00;
+				z-index: 99;
+				transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				margin-top: -2px;
+				left: 100%;
+				width: 100%;
+				height: 4px;
+				background: #fd5f00;
+				transition: all .3s;
+				transition-delay: .4s;
+			}
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}
+.js {
+	.menuPopup {
+		pointer-events: none;
+	}
+
+	.js-menuPopup_open {
+		pointer-events: visible;
+	}
+}
+.js .menuPopup__link {
+	transform: translate3d(0,50px,0);
+	opacity: 0;
+	transition: transform 0s 0.6s, opacity 0s 0.6s;
+}
+.js-menuPopup_open {
+
+	.menuPopup__link {
+		opacity: 1;
+		transform: translate3d(0,0,0);
+		transition: transform 1s 0.3s, opacity 1s 0.3s;
+		transition-timing-function: cubic-bezier(0.2,1,0.2,1);
+
+		&:nth-child(2) {
+			transition-delay: 0.35s;
+		}
+
+		&:nth-child(3) {
+			transition-delay: 0.40s;
+		}
+
+		&:nth-child(4) {
+			transition-delay: 0.45s;
+		}
+
+		&:nth-child(5) {
+			transition-delay: 0.50s;
+		}
+
+		&:nth-child(6) {
+			transition-delay: 0.55s;
+		}
+	}
+}
+.blockRevealer__element{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	pointer-events: none;
+	opacity: 0;
 }
 .paletteWrap {
 
