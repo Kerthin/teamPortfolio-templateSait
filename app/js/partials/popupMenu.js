@@ -14,7 +14,7 @@
 						formEl.classList.add('js-menuPopup_open');
 						contentEl.style.opacity = 1;
 						openCtrl.classList.remove('js-burger_popupOpen');
-						openCtrl.style.zIndex = "999999";
+						openCtrl.style.zIndex = "9999";
 						formEl.style.zIndex = "50";
 						contentEl.style.zIndex = "50";
 					}
