@@ -1057,6 +1057,114 @@
 		}
 	}
 }
+
+.hoverPortfolioWrap {
+	& &__titleBox {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+
+		.hoverPortfolioWrap__title {
+			font-family: 'OpenSans', sans-serif;
+			font-size: 24px;
+		}
+	}
+
+	& &__item {
+		padding: 5px;
+		margin-bottom: 10px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+		.hoverPortfolioWrap__titleItemBox {
+			width: 100%;
+			text-align: center;
+
+			.hoverPortfolioWrap__titleItem {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 18px;
+				margin: 5px;
+			}
+
+			.hoverPortfolioWrap__nameTypes {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 16px;
+				margin: 5px;
+			}
+		}
+
+		.hoverPortfolioWrap__typeBox {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin: 20px 0;
+		}
+
+		.hoverPortfolioWrap__jobBlock {
+			position: relative;
+			float: left;
+			overflow: hidden;
+			margin: 10px 1%;
+			width: 380px;
+			height: 260px;
+			background: #3085a3;
+			text-align: center;
+			cursor: pointer;
+
+			.hoverPortfolioWrap__img {
+				position: relative;
+				display: block;
+				height: 100%;
+				width: 100%;
+				opacity: 0.8;
+			}
+
+			.hoverPortfolioWrap__slideSlice {
+				padding: 2em;
+				text-transform: uppercase;
+				font-size: 1.25em;
+				backface-visibility: hidden;
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				height: 1.5em;
+				background: #fff;
+				color: #3c4a50;
+				transition: transform 0.35s;
+				transform: translate3d(0,100%,0);
+
+				&:before,
+				&:after {
+					pointer-events: none;
+				}
+
+				.hoverPortfolioWrap__nameLogo {
+					word-spacing: -0.15em;
+					// font-weight: 300;
+					font-family: 'Roboto', sans-serif;
+					// margin-left: -80px;
+					margin-top: -20px;
+					ext-align: center;
+					transition: transform 0.35s;
+					transform: translate3d(0,200%,0);
+					display: inline-block;
+				}
+			}
+
+			&:hover {
+				.hoverPortfolioWrap__slideSlice,
+				.hoverPortfolioWrap__nameLogo {
+					transform: translate3d(0,0,0);
+				}
+
+				.hoverPortfolioWrap__nameLogo {
+					transition-delay: 0.1s;
+				}
+			}
+		}
+	}
+}
 $colorPalette: (
 	1	: #f5f4e8,
 	2	: #c50d66,
