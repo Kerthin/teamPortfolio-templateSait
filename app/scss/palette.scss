@@ -2,6 +2,11 @@
 ::-webkit-scrollbar {
 	width: 0;
 }
+:root {
+	--colorFrontElement: #fd5f00;
+	--colorLightGradient: #f5f4e8;
+	--colorDarkGradient: #005792;
+}
 .container {
 	max-width: 100%;
 	width: 960px;
@@ -27,7 +32,7 @@
 			margin: -75px 0 0 -75px;
 			border-radius: 50%;
 			border: 3px solid transparent;
-			border-top-color: #fd5f00;
+			border-top-color: var(--colorFrontElement);
 			animation: spin 1.7s linear infinite;
 			z-index: 11;
 
@@ -40,7 +45,7 @@
 				bottom: 5px;
 				border-radius: 50%;
 				border: 3px solid transparent;
-				border-top-color: #fd5f00;
+				border-top-color: var(--colorFrontElement);
 				animation: spin-reverse .6s linear infinite;
 			}
 
@@ -53,7 +58,7 @@
 				bottom: 15px;
 				border-radius: 50%;
 				border: 3px solid transparent;
-				border-top-color: #fd5f00;
+				border-top-color: var(--colorFrontElement);
 				animation: spin 1s linear infinite;
 			}
 		}
@@ -161,7 +166,7 @@
 				left: -100%;
 				width: 100%;
 				height: 100%;
-				background: #fd5f00;
+				background: var(--colorFrontElement);
 				z-index: 99;
 				transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
 			}
@@ -174,7 +179,7 @@
 				left: 100%;
 				width: 100%;
 				height: 4px;
-				background: #fd5f00;
+				background: var(--colorFrontElement);
 				transition: all .3s;
 				transition-delay: .4s;
 			}
@@ -417,7 +422,7 @@
 
 			.hoverBlockWrap__gradientBlock {
 				position: absolute;
-				background: repeating-linear-gradient(135deg, #f5f4e8, #f5f4e8 10px, #005792 10px, #005792 20px);
+				background: repeating-linear-gradient(135deg, var(--colorLightGradient), var(--colorLightGradient) 10px, var(--colorDarkGradient) 10px, var(--colorDarkGradient) 20px);
 				box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
 				&_tl {
@@ -443,7 +448,7 @@
 				transition: all 0.5s;
 
 				&_bg {
-					background-color: #fd5f00;
+					background-color: var(--colorFrontElement);
 				}
 
 				&_tl {
@@ -530,7 +535,7 @@
 			width: 100%;
 		}
 
-		$primaryColor: #fd5f00;
+		$primaryColor: var(--colorFrontElement);
 		$secondaryColor: #fff;
 		$steps: 20;
 
@@ -541,8 +546,8 @@
 			font-size: 98px;
 			font-weight: 700;
 			text-transform: uppercase;
-			text-shadow: 6px -6px 0px #fd5f00;
-			background: repeating-linear-gradient(45deg, #005792, #005792 1px, #f5f4e8 2px, #f5f4e8 3px);
+			text-shadow: 6px -6px 0px var(--colorFrontElement);
+			background: repeating-linear-gradient(45deg, var(--colorDarkGradient), var(--colorDarkGradient) 1px, var(--colorLightGradient) 2px, var(--colorLightGradient) 3px);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 
@@ -561,13 +566,13 @@
 
 			&::before {
 				left: 7px;
-				text-shadow: 1px 0 #fd5f00;
+				text-shadow: 1px 0 var(--colorFrontElement);
 				animation: glitch-effect 3s infinite linear alternate-reverse;
 			}
 
 			&::after {
 				left: 3px;
-				text-shadow: -1px 0 #fd5f00;
+				text-shadow: -1px 0 var(--colorFrontElement);
 				animation: glitch-effect 2s infinite linear alternate-reverse;
 			}
 		}
@@ -640,7 +645,7 @@
 
 				.strokeWrap__stroke {
 					fill: none;
-					stroke: #fd5f00;
+					stroke: var(--colorFrontElement);
 					stroke-width: 3;
 					stroke-linecap: round;
 					stroke-linejoin: round;
@@ -695,7 +700,7 @@
 
 				.strokeWrap__stroke {
 					fill: none;
-					stroke: #fd5f00;
+					stroke: var(--colorFrontElement);
 					stroke-width: 3;
 					stroke-linecap: round;
 					stroke-linejoin: round;
@@ -872,11 +877,11 @@
 				z-index: 3;
 
 				&.waveWrap__waveСoordinates_orange {
-					stroke: #fd5f00;
+					stroke: var(--colorFrontElement);
 				}
 
 				&.waveWrap__waveСoordinates_blue {
-					stroke: #005792;
+					stroke: var(--colorDarkGradient);
 				}
 
 				&.waveWrap__waveСoordinates_9s {
@@ -961,7 +966,7 @@
 				position: absolute;
 				width: 160px;
 				height: 45px;
-				background: repeating-linear-gradient(135deg, #f5f4e8, #f5f4e8 10px, #005792 10px, #005792 20px);
+				background: repeating-linear-gradient(135deg, var(--colorLightGradient), var(--colorLightGradient) 10px, var(--colorDarkGradient) 10px, var(--colorDarkGradient) 20px);
 				box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
 				&_tl {
@@ -988,9 +993,9 @@
 				padding: 10px 25px;
 				font-family: "Roboto", sans-serif;
 				font-size: 12px;
-				color: #fd5f00;
+				color: var(--colorFrontElement);
 				background: #fff;
-				border: 2px solid #fd5f00;
+				border: 2px solid var(--colorFrontElement);
 				transition: all 0.3s ease;
 				position: absolute;
 				z-index: 1;
@@ -1022,7 +1027,7 @@
 					top: 0;
 					right: 0;
 					z-index: -1;
-					background: #fd5f00;
+					background: var(--colorFrontElement);
 					transition: all 0.5s ease;
 				}
 			}
