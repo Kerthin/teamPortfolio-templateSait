@@ -190,4 +190,19 @@ html
 							img.hoverPortfolioWrap__img(src="image/sea.jpg" alt="img25")
 							figcaption.hoverPortfolioWrap__slideSlice
 								h2.hoverPortfolioWrap__nameLogo LOGO
+			.titlePageWrap
+				.titlePageWrap__titleBox
+					h1.titlePageWrap__title TITLE BLOCK
+				mixin titlePageItemMix(titlePageBlockMix, nameTitlePageMix, titlePageClassMix, titlePageMix)
+					.titlePageWrap__item
+						.titlePageWrap__titleItemBox
+							h1.titlePageWrap__titleItem #{titlePageBlockMix}
+							p.titlePageWrap__nameTypes #{nameTitlePageMix}
+						.titlePageWrap__typeBox
+							h1(class=`titlePageWrap__${titlePageClassMix}`) !{titlePageMix}
+				+titlePageItemMix('ITEM 1', 'SOLID SHADOW', 'solidShadow', 'DIGITAL <br/> INSOMNIAC')
+				+titlePageItemMix('ITEM 1', 'SOLID SHADOW', 'directShadow', 'INSOMNIAC <br/> DIGITAL')
+				+titlePageItemMix('ITEM 1', 'SOLID SHADOW', 'cornerShadow', 'INSOMNIAC <br/> DIGITAL')
+				+titlePageItemMix('ITEM 1', 'SOLID SHADOW', 'discoShadow', 'INSOMNIAC <br/> DIGITAL')
+				+titlePageItemMix('ITEM 1', 'SOLID SHADOW', 'retroShadow', 'INSOMNIAC <br/> DIGITAL')
 		include template/scripts.pug

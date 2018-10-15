@@ -6,6 +6,10 @@
 	--colorFrontElement: #fd5f00;
 	--colorLightGradient: #f5f4e8;
 	--colorDarkGradient: #005792;
+
+	// --colorFrontElement: #0E2646;
+	// --colorLightGradient: #fff;
+	// --colorDarkGradient: #D5A677;
 }
 input[type="radio"] {
 	margin: 10px;
@@ -1452,6 +1456,181 @@ input[type="radio"] {
 					transition-delay: 0.1s;
 				}
 			}
+		}
+	}
+}
+.titlePageWrap {
+
+	& &__titleBox {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+		background-color: #384048;
+
+		.titlePageWrap__title {
+			color: #fff;
+			font-family: 'OpenSans', sans-serif;
+			font-size: 24px;
+		}
+	}
+
+	& &__item {
+		padding: 5px;
+		margin-bottom: 10px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		overflow: hidden;
+		background-color: #384048;
+
+		.titlePageWrap__titleItemBox {
+			width: 100%;
+			text-align: center;
+
+			.titlePageWrap__titleItem {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 18px;
+				margin: 5px;
+				color: #fff;
+			}
+
+			.titlePageWrap__nameTypes {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 16px;
+				margin: 5px;
+				color: #fff;
+			}
+		}
+
+		.titlePageWrap__typeBox {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 500px;
+			margin: 20px 0;
+		}
+
+		@function solidShadow($color) {
+			$val: 1px 1px $color;
+
+			@for $i from 1 through 500 {
+				$val: #{$val}, #{$i}px #{$i}px #{$color};
+			}
+
+			@return $val;
+		}
+
+		.titlePageWrap__solidShadow {
+			font-family: 'Roboto', sans-serif;
+			font-size: 4.5rem;
+			text-align: center;
+			text-shadow: solidShadow(#2d343a);
+		}
+
+		.titlePageWrap__directShadow {
+			font-family: 'Roboto', sans-serif;
+			font-size: 4.5rem;
+			text-align: center;
+			color: #fff;
+			text-shadow: 
+				0 -1px 0 #fff, 
+				0 1px 0 #2e2e2e, 
+				0 2px 0 #2c2c2c, 
+				0 3px 0 #2a2a2a, 
+				0 4px 0 #282828, 
+				0 5px 0 #262626, 
+				0 6px 0 #242424, 
+				0 7px 0 #222, 
+				0 8px 0 #202020, 
+				0 9px 0 #1e1e1e, 
+				0 10px 0 #1c1c1c, 
+				0 11px 0 #1a1a1a, 
+				0 12px 0 #181818, 
+				0 13px 0 #161616, 
+				0 14px 0 #141414, 
+				0 15px 0 #121212, 
+				0 22px 30px rgba(0, 0, 0, 0.9);
+		}
+
+		.titlePageWrap__solidShadow {
+			font-family: 'Roboto', sans-serif;
+			font-size: 4.5rem;
+			text-align: center;
+			color: #fff;
+			text-shadow: solidShadow(#2d343a);
+		}
+
+		.titlePageWrap__solidShadow {
+			font-family: 'Roboto', sans-serif;
+			font-size: 4.5rem;
+			text-align: center;
+			color: #fff;
+			text-shadow: solidShadow(#2d343a);
+		}
+
+		.titlePageWrap__solidShadow {
+			font-family: 'Roboto', sans-serif;
+			font-size: 4.5rem;
+			text-align: center;
+			color: #fff;
+			text-shadow: solidShadow(#2d343a);
+		}
+
+		.titlePageWrap__cornerShadow {
+			font-family: 'Roboto', sans-serif;
+			font-size: 4.5rem;
+			text-align: center;
+			color: #fff;
+			// font-family: 'Lobster';
+			text-shadow:
+				1px 1px #2d343a,
+				2px 2px #2d343a,
+				3px 3px #2d343a,
+				4px 4px #2d343a,
+				5px 5px #2d343a,
+				6px 6px #2d343a,
+				7px 7px #2d343a,
+				8px 8px #2d343a,
+				9px 9px #2d343a,
+				10px 10px #2d343a,
+				11px 11px #2d343a,
+				12px 12px #2d343a,
+				13px 13px #2d343a,
+				14px 14px #2d343a,
+				15px 15px #2d343a,
+				16px 16px #2d343a,
+				17px 17px #2d343a,
+				18px 18px #2d343a,
+				19px 19px #2d343a,
+				20px 20px #2d343a,
+				21px 21px #2d343a,
+				22px 22px #2d343a,
+				23px 23px #2d343a,
+				24px 24px #2d343a,
+				25px 25px #2d343a,
+				26px 26px 6px #2d343a;
+		}
+
+		.titlePageWrap__discoShadow {
+			font-family: 'Roboto', sans-serif;
+			font-size: 4.5rem;
+			text-align: center;
+			color: #f5f4e8;
+			text-shadow:
+				-2px 2px 0 #292322,
+				-4px 4px 0 #f60,
+				-6px 6px 0 #292322,
+				-8px 8px 0 #fc0;
+		}
+
+		.titlePageWrap__retroShadow {
+			font-family: 'Roboto', sans-serif;
+			font-size: 4.5rem;
+			text-align: center;
+			color: #f5f4e8;
+			text-shadow: 
+				4px 4px 0px #2c2c2c, 
+				7px 7px 0px #2c2c2c;
 		}
 	}
 }
