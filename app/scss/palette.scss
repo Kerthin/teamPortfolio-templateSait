@@ -11,9 +11,11 @@
 	// --colorLightGradient: #fff;
 	// --colorDarkGradient: #D5A677;
 }
+
 input[type="radio"] {
 	margin: 10px;
 }
+
 .container__firstSelection:checked {
 	~ .menuPopup {
 		.menuPopup__link {
@@ -293,6 +295,63 @@ input[type="radio"] {
 		}
 		.hoverButtonWrap__button {
 			--colorFrontElement: #FF7260;
+		}
+	}
+}
+
+.container__dribbleSelection:checked {
+	~ .menuPopup {
+		.menuPopup__link {
+			&::before {
+				--colorFrontElement: #e1646a;
+			}
+
+			&::after {
+				--colorFrontElement: #e1646a;
+			}
+		}
+	}
+
+	~ .hoverBlockWrap {
+		.hoverBlockWrap__gradientBlock {
+			--colorDarkGradient: #464447;
+			--colorLightGradient: #f8f5ed;
+		}
+		.hoverBlockWrap__contentBlock_bg {
+			--colorFrontElement: #e1646a;
+		}
+	}
+
+	~ .logoWrap {
+		.logoWrap__logo {
+			--colorFrontElement: #e1646a;
+			--colorDarkGradient: #464447;
+			--colorLightGradient: #f8f5ed;
+		}
+	}
+
+	~ .burgerWrap {
+		.strokeWrap__stroke {
+			--colorFrontElement: #e1646a;
+		}
+	}
+
+	~ .waveWrap {
+		.waveWrap__waveСoordinates_orange {
+			--colorFrontElement: #e1646a;
+		}
+		.waveWrap__waveСoordinates_blue {
+
+		}
+	}
+
+	~ .hoverButtonWrap {
+		.hoverButtonWrap__gradientBlock {
+			--colorDarkGradient: #464447;
+			--colorLightGradient: #f8f5ed;
+		}
+		.hoverButtonWrap__button {
+			--colorFrontElement: #e1646a;
 		}
 	}
 }
@@ -759,7 +818,7 @@ input[type="radio"] {
 				}
 
 				&_bg {
-					// background-color: var(--colorFrontElement);
+					background: var(--colorFrontElement) !important;
 				}
 
 				&_tl {

@@ -10,6 +10,7 @@ html
 			<input class="container__thirdSelection" type="radio" name="chetyre"> Selection 3 (Pink)
 			<input class="container__fourthSelection" type="radio" name="chetyre"> Selection 4 (Dark Orange)
 			<input class="container__fifthSelection" type="radio" name="chetyre"> Selection 5 (Peach)
+			<input class="container__dribbleSelection" type="radio" name="chetyre"> Selection 6 (Dribble)
 			.container__loaderWrap
 				.loader
 				.loaderSection.loaderSection_left
@@ -70,13 +71,13 @@ html
 						.hoverBlockWrap__setBox
 							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_square
 								.hoverBlockWrap__gradientBlock(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
-								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+								.hoverBlockWrap__contentBlock(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
 							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_vertical
 								.hoverBlockWrap__gradientBlock(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
-								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+								.hoverBlockWrap__contentBlock(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
 							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_horizontal
 								.hoverBlockWrap__gradientBlock(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
-								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+								.hoverBlockWrap__contentBlock(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
 				+hoverBlockItemMix('TOP-RIGHT', 'bl', 'tr')
 				+hoverBlockItemMix('TOP-LEFT', 'br', 'tl')
 				+hoverBlockItemMix('BOTTOM-RIGHT', 'tl', 'br')
@@ -92,17 +93,36 @@ html
 						.hoverBlockWrap__setBox
 							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_square
 								.hoverBlockWrap__gradientBlock.hoverBlockWrap__gradientBlock_solidBg(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
-								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_unShadow.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_unShadow(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
 							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_vertical
 								.hoverBlockWrap__gradientBlock.hoverBlockWrap__gradientBlock_solidBg(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
-								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_unShadow.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_unShadow(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
 							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_horizontal
 								.hoverBlockWrap__gradientBlock.hoverBlockWrap__gradientBlock_solidBg(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
-								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_unShadow.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_unShadow(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
 				+hoverBlockItemMix('TOP-RIGHT', 'bl', 'tr')
 				+hoverBlockItemMix('TOP-LEFT', 'br', 'tl')
 				+hoverBlockItemMix('BOTTOM-RIGHT', 'tl', 'br')
 				+hoverBlockItemMix('BOTTOM-LEFT', 'tr', 'bl')
+			.hoverBlockWrap
+				.hoverBlockWrap__titleBox
+					h1.hoverBlockWrap__title HOVER BLOCK
+				mixin hoverBlockItemMix(titleHoverBlockMix, positionGradientMix, positionContentMix)
+					.hoverBlockWrap__item
+						.hoverBlockWrap__titleItemBox
+							h1.hoverBlockWrap__titleItem #{titleHoverBlockMix}
+							p.hoverBlockWrap__nameTypes SQUARE VERTICAL HORIZONTAL
+						.hoverBlockWrap__setBox
+							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_square
+								.hoverBlockWrap__gradientBlock(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
+								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_vertical
+								.hoverBlockWrap__gradientBlock(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
+								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_horizontal
+								.hoverBlockWrap__gradientBlock(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
+								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+				+hoverBlockItemMix('TOP-RIGHT', 'bl', 'tr')
 			.logoWrap
 				.logoWrap__titleBox
 					h1.logoWrap__title LOGO GLITCH EFFECT
