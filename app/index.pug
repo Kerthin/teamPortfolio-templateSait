@@ -81,6 +81,28 @@ html
 				+hoverBlockItemMix('TOP-LEFT', 'br', 'tl')
 				+hoverBlockItemMix('BOTTOM-RIGHT', 'tl', 'br')
 				+hoverBlockItemMix('BOTTOM-LEFT', 'tr', 'bl')
+			.hoverBlockWrap
+				.hoverBlockWrap__titleBox
+					h1.hoverBlockWrap__title HOVER BLOCK
+				mixin hoverBlockItemMix(titleHoverBlockMix, positionGradientMix, positionContentMix)
+					.hoverBlockWrap__item
+						.hoverBlockWrap__titleItemBox
+							h1.hoverBlockWrap__titleItem #{titleHoverBlockMix}
+							p.hoverBlockWrap__nameTypes SQUARE VERTICAL HORIZONTAL
+						.hoverBlockWrap__setBox
+							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_square
+								.hoverBlockWrap__gradientBlock.hoverBlockWrap__gradientBlock_solidBg(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
+								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_unShadow.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_vertical
+								.hoverBlockWrap__gradientBlock.hoverBlockWrap__gradientBlock_solidBg(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
+								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_unShadow.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_horizontal
+								.hoverBlockWrap__gradientBlock.hoverBlockWrap__gradientBlock_solidBg(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
+								.hoverBlockWrap__contentBlock.hoverBlockWrap__contentBlock_unShadow.hoverBlockWrap__contentBlock_bg(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+				+hoverBlockItemMix('TOP-RIGHT', 'bl', 'tr')
+				+hoverBlockItemMix('TOP-LEFT', 'br', 'tl')
+				+hoverBlockItemMix('BOTTOM-RIGHT', 'tl', 'br')
+				+hoverBlockItemMix('BOTTOM-LEFT', 'tr', 'bl')
 			.logoWrap
 				.logoWrap__titleBox
 					h1.logoWrap__title LOGO GLITCH EFFECT
@@ -90,6 +112,24 @@ html
 						p.logoWrap__nameEffect GLITCH
 					.logoWrap__effectBox
 						h1.logoWrap__logo(data-text="Logo") Logo
+				.logoWrap__item
+					.logoWrap__titleItemBox
+						h1.logoWrap__titleItem
+						p.logoWrap__nameEffect GLITCH
+					.logoWrap__effectBox
+						h1.logoWrap__logo(data-text="iD") iD
+				.logoWrap__item
+					.logoWrap__titleItemBox
+						h1.logoWrap__titleItem
+						p.logoWrap__nameEffect GLITCH
+					.logoWrap__effectBox
+						h1.logoWrap__logo(data-text="ID") ID
+				.logoWrap__item
+					.logoWrap__titleItemBox
+						h1.logoWrap__titleItem
+						p.logoWrap__nameEffect GLITCH
+					.logoWrap__effectBox
+						h1.logoWrap__logo(data-text="INSOMNIAC") INSOMNIAC
 			.burgerWrap
 				.burgerWrap__titleBox
 					h1.burgerWrap__title BURGER MENU SVG

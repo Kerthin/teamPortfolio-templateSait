@@ -470,7 +470,7 @@ input[type="radio"] {
 				height: 100%;
 				background: var(--colorFrontElement);
 				transition: all .3s;
-				transition-delay: .5s;
+				transition-delay: .4s;
 				z-index: -1;
 			}
 
@@ -715,6 +715,11 @@ input[type="radio"] {
 				background: repeating-linear-gradient(135deg, var(--colorLightGradient), var(--colorLightGradient) 10px, var(--colorDarkGradient) 10px, var(--colorDarkGradient) 20px);
 				box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
+				&_solidBg {
+					background: #000;
+					box-shadow: none;
+				}
+
 				&_tl {
 
 				}
@@ -736,6 +741,10 @@ input[type="radio"] {
 				position: absolute;
 				box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 				transition: all 0.5s;
+
+				&_unShadow {
+					box-shadow: none;
+				}
 
 				&_bg {
 					background-color: var(--colorFrontElement);
@@ -835,7 +844,7 @@ input[type="radio"] {
 			// font-size: 7em;
 			font-size: 98px;
 			font-weight: 700;
-			text-transform: uppercase;
+			// text-transform: uppercase;
 			text-shadow: 6px -6px 0px var(--colorFrontElement);
 			background: repeating-linear-gradient(45deg, var(--colorDarkGradient), var(--colorDarkGradient) 1px, var(--colorLightGradient) 2px, var(--colorLightGradient) 3px);
 			-webkit-background-clip: text;
