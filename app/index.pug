@@ -245,4 +245,23 @@ html
 				+titlePageItemMix('ITEM 1', 'SOLID SHADOW', 'cornerShadow', 'INSOMNIAC <br/> DIGITAL')
 				+titlePageItemMix('ITEM 1', 'SOLID SHADOW', 'discoShadow', 'INSOMNIAC <br/> DIGITAL')
 				+titlePageItemMix('ITEM 1', 'SOLID SHADOW', 'retroShadow', 'INSOMNIAC <br/> DIGITAL')
+			.skillWrap
+				.skillWrap__titleBox
+					h1.skillWrap__title SKILL BOX
+				.skillWrap__item
+					.skillWrap__titleItemBox
+						h1.skillWrap__titleItem SET 1
+						p.skillWrap__nameTypes 
+					.skillWrap__typeBox
+						mixin skillItemMix(nameSkillMix, percentSkillMix, percentSkillClassMix)
+							.skillWrap__skill
+								.skillWrap__descriptionSkill
+									p.skillWrap__nameSkill #{nameSkillMix}
+									p.skillWrap__percentSkill #{percentSkillMix}
+								.skillWrap__valueSkillBox
+									.skillWrap__valueSkill(class=`skillWrap__valueSkill_${percentSkillClassMix}`)
+						+skillItemMix('HTML', '93%', '93')
+						+skillItemMix('CSS', '86%', '86')
+						+skillItemMix('JS', '78%', '78')
+						+skillItemMix('JQuery', '89%', '89')
 		include template/scripts.pug
