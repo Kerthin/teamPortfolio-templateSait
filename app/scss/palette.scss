@@ -1281,6 +1281,84 @@ input[type="radio"] {
 	}
 }
 
+.animBlockWrap {
+
+	& &__titleBox {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+
+		.animBlockWrap__title {
+			font-family: 'OpenSans', sans-serif;
+			font-size: 24px;
+		}
+	}
+
+	& &__item {
+		padding: 5px;
+		margin-bottom: 10px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+		.animBlockWrap__titleItemBox {
+			width: 100%;
+			text-align: center;
+
+			.animBlockWrap__titleItem {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 18px;
+				margin: 5px;
+			}
+
+			.animBlockWrap__nameTypes {
+				font-family: 'OpenSans', sans-serif;
+				font-size: 16px;
+				margin: 5px;
+			}
+		}
+
+		.animBlockWrap__setBox {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin: 20px 0;
+		}
+
+		.animBlockWrap__block {
+			display: block;
+			float: left;
+			margin: 15px;
+			background: repeating-linear-gradient(135deg, var(--colorDarkGradient), var(--colorDarkGradient) 4px, #fff 4px, #fff 10px);
+			animation: animationGradient 3s linear infinite;
+
+			&_sm {
+				width: 71px;
+				height: 71px;
+			}
+
+			&_md {
+				width: 85px;
+				height: 85px;
+			}
+
+			&_lg {
+				width: 99px;
+				height: 99px;
+			}
+
+			@keyframes animationGradient {
+				from {
+					background-position: 0 0;
+				}
+				to {
+					background-position: 85px 85px;
+				}
+			}
+		}
+	}
+}
+
 .hoverButtonWrap {
 
 	& &__titleBox {
