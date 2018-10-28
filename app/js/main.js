@@ -4,9 +4,19 @@
 //= ../../bower_components/jquery/dist/jquery.min.js
 
 /********************
+	loader.js
+********************/
+//= partials/loader.js
+
+/********************
 	anime.min.js
 ********************/
 //= partials/libs/anime.min.js
+
+/********************
+	scrollMonitor.js
+********************/
+//= partials/libs/scrollMonitor.js
 
 /********************
 	revealer.js
@@ -19,6 +29,6 @@
 //= partials/popupMenu.js
 
 /********************
-	loader.js
+	revealAnimationScroll.js
 ********************/
-//= partials/loader.js
+//= partials/revealAnimationScroll.js

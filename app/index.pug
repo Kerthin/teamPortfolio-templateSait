@@ -294,4 +294,26 @@ html
 						+skillItemMix('CSS', '86%', '86')
 						+skillItemMix('JS', '78%', '78')
 						+skillItemMix('JQuery', '89%', '89')
+			.hoverBlockWrap
+				.hoverBlockWrap__titleBox
+					h1.hoverBlockWrap__title REVEALER BLOCK
+				mixin hoverBlockItemMix(titleHoverBlockMix, positionGradientMix, positionContentMix, revealNameMix1, revealNameMix2, revealNameMix3)
+					.hoverBlockWrap__item
+						.hoverBlockWrap__titleItemBox
+							h1.hoverBlockWrap__titleItem #{titleHoverBlockMix}
+							p.hoverBlockWrap__nameTypes SQUARE VERTICAL HORIZONTAL
+						.hoverBlockWrap__setBox
+							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_square(class=`${revealNameMix1}`)
+								.hoverBlockWrap__gradientBlock(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
+								.hoverBlockWrap__contentBlock(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_vertical(class=`${revealNameMix2}`)
+								.hoverBlockWrap__gradientBlock(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
+								.hoverBlockWrap__contentBlock(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+							.hoverBlockWrap__hoverBlock.hoverBlockWrap__hoverBlock_horizontal(class=`${revealNameMix3}`)
+								.hoverBlockWrap__gradientBlock(class=`hoverBlockWrap__gradientBlock_${positionGradientMix}`)
+								.hoverBlockWrap__contentBlock(class=`hoverBlockWrap__contentBlock_${positionContentMix}`)
+				+hoverBlockItemMix('TOP-RIGHT', 'bl', 'tr', 'rev1', 'rev2', 'rev3')
+				+hoverBlockItemMix('TOP-LEFT', 'br', 'tl', 'rev4', 'rev5', 'rev6')
+				+hoverBlockItemMix('BOTTOM-RIGHT', 'tl', 'br', 'rev7', 'rev8', 'rev9')
+				+hoverBlockItemMix('BOTTOM-LEFT', 'tr', 'bl', 'rev10', 'rev11', 'rev12')
 		include template/scripts.pug
