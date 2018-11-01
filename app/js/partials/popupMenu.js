@@ -8,7 +8,7 @@
 		openCtrl.onclick = function() {
 			if (openCtrl.classList.contains('js-burger_popupOpen') === true) {
 				revealer.reveal({
-					bgcolor: '#fd5f00',
+					bgcolor: '#e1646a',
 					direction: 'tb',
 					duration: 700,
 					onCover: function(contentEl, revealerEl) {
@@ -23,7 +23,7 @@
 			} else {
 				formEl.classList.remove('js-menuPopup_open');
 				revealer.reveal({
-					bgcolor: '#fd5f00',
+					bgcolor: '#e1646a',
 					direction: 'bt',
 					duration: 700, 
 					onCover: function(contentEl, revealerEl) {

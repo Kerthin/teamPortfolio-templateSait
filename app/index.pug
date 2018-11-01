@@ -329,4 +329,14 @@ html
 				+hoverBlockItemMix('TOP-LEFT', 'br', 'tl', 'rev4', 'rev5', 'rev6')
 				+hoverBlockItemMix('BOTTOM-RIGHT', 'tl', 'br', 'rev7', 'rev8', 'rev9')
 				+hoverBlockItemMix('BOTTOM-LEFT', 'tr', 'bl', 'rev10', 'rev11', 'rev12')
+			.aeEffectsWrap
+				.aeEffectsWrap__titleBox
+					h1.aeEffectsWrap__title REVEALER BLOCK
+				mixin aeEffectsItemMix(titleAeEffectsMix, nameEffectClass)
+					.aeEffectsWrap__item
+						.aeEffectsWrap__titleItemBox
+							h1.aeEffectsWrap__titleItem #{titleAeEffectsMix}
+						.aeEffectsWrap__setBox
+							.aeEffectsWrap__gifBlock(class=`aeEffectsWrap__gifBlock_${nameEffectClass}`)
+				+aeEffectsItemMix('SCRIBBLE', 'scribbleText')
 		include template/scripts.pug
