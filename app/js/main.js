@@ -19,6 +19,11 @@
 //= partials/libs/scrollMonitor.js
 
 /********************
+	lottie.js
+********************/
+//= partials/libs/lottie.js
+
+/********************
 	revealer.js
 ********************/
 //= partials/libs/revealer.js
@@ -32,3 +37,8 @@
 	revealAnimationScroll.js
 ********************/
 //= partials/revealAnimationScroll.js
+
+/********************
+	bodymovin.js
+********************/
+//= partials/bodymovin.js

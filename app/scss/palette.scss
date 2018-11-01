@@ -1992,6 +1992,14 @@ input[type="radio"] {
 			&_scribbleText {
 				background-image: url('../image/scribbleText.gif')
 			}
+
+			&_flatAnimSlow {
+				background-image: url('../image/flatAnimSlow.gif');
+			}
+
+			&_flatAnim {
+				background-image: url('../image/flatAnim.gif');
+			}
 		}
 	}
 }
